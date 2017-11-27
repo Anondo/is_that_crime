@@ -3,7 +3,7 @@
 require(get_include_path()."\Projects\aiub project\Controllers\AdminController.php");
 $admin_login = new AdminController();
 if($admin_login->isLogged()) //if user already logged in
-		$admin_login->redirect("http://localhost/Projects/aiub%20project/Views/admin/admin_panel.php"); //redirect to the home page
+		$admin_login->redirect("http://localhost/Projects/aiub%20projectadmin/admin_panel.php"); //redirect to the home page
 
  ?>
 <html>
@@ -28,7 +28,7 @@ if($admin_login->isLogged()) //if user already logged in
 				<td><input type="submit" name="submitButton" value = "LOGIN"/></td>
 			</tr>
 		</table>
-		
+
 	</form>
 
 </body>

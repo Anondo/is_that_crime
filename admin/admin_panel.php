@@ -1,6 +1,6 @@
 <?php
-	
-	require(get_include_path()."Projects\aiub project\Controllers\AdminController.php");
+
+	require(get_include_path()."\Projects\aiub project\Controllers\AdminController.php");
     $admin_login = new AdminController();
     if($admin_login->isLogged())
     {
