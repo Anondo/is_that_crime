@@ -3,13 +3,13 @@
 require(get_include_path()."\Projects\aiub project\Controllers\AdminController.php");
 $admin_login = new AdminController();
 if($admin_login->isLogged()) //if user already logged in
-		$admin_login->redirect("http://localhost/Projects/aiub%20projectadmin/admin_panel.php"); //redirect to the home page
+		$admin_login->redirect("http://localhost:<?php echo  {$_SERVER["SERVER_PORT"]};?>/Projects/aiub%20projectadmin/admin_panel.php"); //redirect to the home page
 
  ?>
 <html>
 <head>
 	<title>Login Page For Admins</title>
-	<script src = "http://localhost/Projects/aiub project/js/login_handler.js"></script>
+	<script src = "http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub project/js/login_handler.js"></script>
 </head>
 <body>
 
