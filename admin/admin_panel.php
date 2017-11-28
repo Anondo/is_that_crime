@@ -3,9 +3,9 @@
 		<title>Admin Panel</title>
 	</head>
 	<body>
-		<?php
+	<?php
 
-		require(get_include_path()."\Projects\aiub project\Controllers\AdminController.php");
+		require_once(get_include_path()."\Projects\aiub project\Controllers\AdminController.php");
 		$admin_login = new AdminController();
 		if($admin_login->isLogged())
 		{
@@ -18,7 +18,10 @@
 			echo "<p><a href = 'login.php'>Login</a></p>";
 		}
 
-?>
+     ?>
+	 
+	 <a href = " " > Manage Blogs.. </a> <br/>
+	 <a href = " " > Manage Users.. </a>
 	</body>
 </html>
 
