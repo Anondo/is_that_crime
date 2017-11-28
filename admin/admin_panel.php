@@ -5,7 +5,7 @@
     if($admin_login->isLogged())
     {
         echo "<h1>Welcome ". $admin_login->getUsername(). "</h1>";
-        echo "<p><a href = 'http://localhost:<?php echo  {$_SERVER["SERVER_PORT"]};?>/Projects/aiub project/Views/action/logout.php'>Logout</a></p>";
+        echo "<p><a href = 'http://localhost:{$_SERVER["SERVER_PORT"]}/Projects/aiub project/Views/action/logout.php'>Logout</a></p>";
     }
     else
     {

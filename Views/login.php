@@ -4,7 +4,7 @@
 require(get_include_path()."\Projects\aiub project\Controllers\login_controller.php");
 $login = new Login();
 if($login->isLogged()) //if user already logged in
-		$login->redirect("http://localhost:<?php echo  {$_SERVER["SERVER_PORT"]};?>/Projects/aiub%20project/index.php"); //redirect to the home page
+		$login->redirect("http://localhost:{$_SERVER["SERVER_PORT"]}/Projects/aiub%20project/index.php"); //redirect to the home page
 
  ?>
 <html>

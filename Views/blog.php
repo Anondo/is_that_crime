@@ -117,7 +117,7 @@
                     echo "</tr>";
                     echo "<tr>";
                     echo "<td>";
-                    echo "<form action = 'http://localhost:<?php echo  {$_SERVER["SERVER_PORT"]};?>/Projects/aiub project/Views/action/comment.php/?blog_id=$id&user_id=$userId' method = 'POST' onsubmit = 'return isCommentEmpty()'>
+                    echo "<form action = 'http://localhost:{$_SERVER["SERVER_PORT"]}/Projects/aiub project/Views/action/comment.php/?blog_id=$id&user_id=$userId' method = 'POST' onsubmit = 'return isCommentEmpty()'>
                         $currentUsername:<textarea id = 'commentBox' rows = '7' cols = '165' name = 'commentBody' placeholder = 'Comment Here' style='resize:none;'></textarea>
                         	<input type = 'submit' name = 'commentSubmit' value = 'comment'/>
                     	 </form>";
