@@ -19,14 +19,14 @@ $email = $user["email"];
 $password = $user["password"];
 $pro_pic = $user["pro_pic"];
 $gender = $user["gender"];
-$role = $usercontrol->getRoleName($user["role"]);
+$role = $user["role"];
  ?>
 <html>
 <head>
     <title><?php echo $username ?> Information</title>
 </head>
 <body>
-    <form action="action/user_update.php?user_id=<?php echo $userid ?>&?role=<?php echo $role ?>" method="POST">
+    <form action="action/user_update.php?user_id=<?php echo $userid ?>&role=<?php echo $role ?>" method="POST">
         <table>
             <tr>
             	<td>First Name</td> <td>:</td> <td> <input type="text" name="fname" placeholder="First Name..." value="<?php echo $fname;?>"/> </td>

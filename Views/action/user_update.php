@@ -18,7 +18,7 @@ if(!empty($_POST["fname"]) && !empty($_POST["lname"]) && !empty($_POST["day"]) &
     $gender = $_POST["gender"];
     $ok = $usercontrol->updateUser($id , $fname,$lname ,$day ,$month ,$year ,$uname ,$email,$pass ,$gender,$role);
     if($ok)
-        header("Location: http://localhost:".$_SERVER["SERVER_PORT"]."/Projects/aiub project/Views/user_info.php");
+        header("Location: http://localhost:".$_SERVER["SERVER_PORT"]."/Projects/aiub project/index.php");
     else
         echo "<a href='http://localhost:".$_SERVER["SERVER_PORT"]."/Projects/aiub project/Views/user_info.php'>Something Went Wrong</a>";
 }
