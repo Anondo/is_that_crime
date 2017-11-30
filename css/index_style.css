@@ -73,16 +73,16 @@ article{
 
 }
 #searchby{
-    max-width:30%;
+    max-width:40%;
     height:auto;
     background-color:grey ;
     color: black;
     border: 1px solid black;
-    padding: 5px 12px;
+    padding: 10px;
     margin-left: 10px;
     top:20px;
     float:left;
-    cursor: text; 
+    cursor:pointer; 
 
 }
 #searchbox{
@@ -91,7 +91,7 @@ article{
     background-color:grey ;
     color: black;
     border: 1px solid black;
-    padding: 5px 12px;
+    padding: 10px;
     margin-left: 20px;
     top:20px;
     float:left;
@@ -279,3 +279,25 @@ BLOG POST & COMMENT
 #comment-error{
     float:left;
 }
+/*============================================
+
+
+
+
+
+/*============================================
+   Crime Post page  
+ ==============================================*/
+ 
+#post-container-box{
+         max-width:60%;
+    height:auto;
+    background-color: darkslategray;
+    color:black;
+    border:3px solid grey;
+    padding: 5px 20px 10px 20px;
+    margin: 0;
+    text-align: justify;
+}
+
+
