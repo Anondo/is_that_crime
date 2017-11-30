@@ -26,9 +26,10 @@ $roles = $rolecontrol->getAllRoles();
 <html>
 <head>
     <title><?php echo $username ?> Information</title>
+    <script src = "http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/js/admin_user_handler.js"></script>
 </head>
 <body>
-    <form action="user_update.php?user_id=<?php echo $userid ?>" method="POST">
+    <form name = "signupForm" action="user_update.php?user_id=<?php echo $userid ?>" method="POST" onsubmit = "return validate()">
         <table>
             <tr>
             	<td>First Name</td> <td>:</td> <td> <input type="text" name="fname" placeholder="First Name..." value="<?php echo $fname;?>"/> </td>
@@ -95,7 +96,7 @@ $roles = $rolecontrol->getAllRoles();
             </tr>
 
             <tr>
-            	<td>Password </td> <td>:</td> <td> <input type="text" name="pass" placeholder="password"  onkeyup="passwordValidate(this.value , signupForm.cpass.value)" value="<?php echo $password;?>"/><span id="password_error" style="color:red;"></span></td>
+            	<td>Password </td> <td>:</td> <td> <input type="text" name="pass" placeholder="password"  onkeyup="passwordValidate(this.value)" value="<?php echo $password;?>"/><span id="password_error" style="color:red;"></span></td>
             </tr>
 
             <tr>
