@@ -1,11 +1,10 @@
 <?php
 require_once(get_include_path()."Projects\aiub project\Controllers\UserController.php");
 require_once(get_include_path()."Projects\aiub project\Controllers\RoleController.php");
-$userid = 0;
-if(isset($_GET["user_id"]))
-    $userid = $_GET["user_id"];
+
+session_start();
+$userid = $_SESSION["user_id"];
 $usercontrol = new UserController();
-$rolecontrol = new RoleController();
 $user = $usercontrol->getUser($userid);
 $fname = $user["fname"];
 $lname = $user["lname"];
@@ -21,14 +20,13 @@ $password = $user["password"];
 $pro_pic = $user["pro_pic"];
 $gender = $user["gender"];
 $role = $usercontrol->getRoleName($user["role"]);
-$roles = $rolecontrol->getAllRoles();
  ?>
 <html>
 <head>
     <title><?php echo $username ?> Information</title>
 </head>
 <body>
-    <form action="user_update.php?user_id=<?php echo $userid ?>" method="POST">
+    <form action="action/user_update.php?user_id=<?php echo $userid ?>&?role=<?php echo $role ?>" method="POST">
         <table>
             <tr>
             	<td>First Name</td> <td>:</td> <td> <input type="text" name="fname" placeholder="First Name..." value="<?php echo $fname;?>"/> </td>
@@ -67,7 +65,7 @@ $roles = $rolecontrol->getAllRoles();
                                                         echo "<option value = $k>$v</option>";
                                                 }
                                                 ?>
-                	   	                   	
+
                 	   	                   </select>
 
 
@@ -108,23 +106,6 @@ $roles = $rolecontrol->getAllRoles();
 
             	                 </td>
             </tr>
-            <tr>
-            	<td>Role:</td> <td>:</td> <td>
-            		               <select name="role">
-                                       <?php
-                                            while($r = $roles->fetch_assoc())
-                                            {
-                                                if($r["role_name"] == $role)
-                                                    echo "<option value = {$r['role_id']} selected='selected'>{$r['role_name']}</option>";
-                                                else
-                                                    echo "<option value = {$r['role_id']}>{$r['role_name']}</option>";
-                                            }
-                                        ?>
-            		               	</select>
-
-            	                 </td>
-            </tr>
-
 
             <tr>
                 <td> <input type="submit" name="update_button" value="Update"> </td>
