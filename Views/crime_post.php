@@ -31,11 +31,11 @@
     </navigation>
 
     <article>
-    	<div>
+    	<div id = "post-container-box">
     	<form name = "blog_form" method = "POST" action = "action/putblog.php" enctype="multipart/form-data" onsubmit="return updateCrimeOnLocation(blog_form.location.value)">
 
-				<input type="text" name="title" placeholder="Title" onkeyup="nothing_wrong()">
-			<div>
+				<input type="text" id ="title-post" name="title" placeholder="Title" onkeyup="nothing_wrong()">
+			<div class = "mini-div-box">
 				<label>Place:</label><br>
 				<select name ="location">
 					<?php
@@ -46,11 +46,11 @@
 				 	?>
 				</select>
 			</div>
-			<div>
+			<div class = "mini-div-box">
 				<label>Details(location):</label><br>
 				<input type = "text" name = "secloc" />
 			</div>
-			<div>
+			<div class = "mini-div-box">
 				<label>Category:</label><br>
 				<select name ="category">
 					<option value = "robbery"> Robbery </option>
@@ -62,14 +62,13 @@
 			</div>
 			
    			<label><b> Description : </b></label>
-			<textarea name="body" cols = "120" rows="6" placeholder=" write here ...." onkeyup="nothing_wrong()"></textarea>
+			<textarea id="description-body" name="body" cols = "120" rows="6" placeholder=" write here ...." onkeyup="nothing_wrong()"></textarea>
 			
-		 	<br><button onclick="return nothing_wrong()"> post</button>
+		 	<br><button id="post-button" onclick="return nothing_wrong()"> post</button>
 			<input type="checkbox" name="hideme" value = "hide me"> <strong>hide me </strong>
 			<input type = "file" name = "attchmnt" />
     
 			<span id = "blogDetails_error" style="color:red;"></span>
-			</table>
 		</form>
 	</div>
     </article>
