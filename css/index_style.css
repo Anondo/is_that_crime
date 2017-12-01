@@ -82,7 +82,8 @@ article{
     margin-left: 10px;
     top:20px;
     float:left;
-    cursor:pointer; 
+
+    cursor:pointer;
 }
 #searchbox{
     max-width:70%;
@@ -286,9 +287,10 @@ BLOG POST & COMMENT
 
 
 /*============================================
-   Crime Post page  
+
+   Crime Post page
  ==============================================*/
- 
+
 #post-container-box{
     max-width:60%;
     height:350px;
@@ -312,7 +314,8 @@ BLOG POST & COMMENT
     margin: 5px 0px 5px 0px;
     padding:5px;
     border:2px solid black;
-    border-radius: 3px; 
+
+    border-radius: 3px;
     float: left;
 }
 #mini-div-box-2{
@@ -322,7 +325,8 @@ BLOG POST & COMMENT
     margin: 5px 0px 5px 0px;
     padding:5px;
     border:2px solid black;
-    border-radius: 3px;  
+
+    border-radius: 3px;
     float: left;
 }
 #mini-div-box-3{
@@ -332,7 +336,7 @@ BLOG POST & COMMENT
     margin: 5px 0px 5px 0px;
     padding:5px;
     border:2px solid black;
-    border-radius: 3px; 
+    border-radius: 3px;
     float: left;
 }
 #select-category , #select-location{
@@ -392,5 +396,4 @@ BLOG POST & COMMENT
     float:left;
     clear:both;
 }
-
 
