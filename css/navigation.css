@@ -23,6 +23,7 @@ li {
 }
 .right-li{
     float:right;
+    display: inline-block;
 }
 
 li a, .dropbtn {
