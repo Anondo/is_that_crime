@@ -2,11 +2,6 @@ body{
     margin:0px;
     padding: 0px;
 }
-#pro_pic{
-    width: 8%;
-    height: 8%;
-}
-
 #single_blog_content{
     border-color: transparent;
     border-style: solid;
