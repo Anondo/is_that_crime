@@ -2,7 +2,7 @@
 <head>
     <script src = "http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/js/comment_handler.js"></script>
     <script src = "http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/js/blog_handler.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/css/index_style.css">
+    
     <link rel="stylesheet" type="text/css" href="http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/css/navigation.css">
     <link rel="stylesheet" type="text/css" href="http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/css/blog_style.css">
     <link rel="stylesheet" type="text/css" href="http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/css/comment_style.css">
@@ -39,16 +39,22 @@
 <body>
 <div>
     <navigation>
-        <ul>
             <?php
             if($logged)
-                echo "<li class = 'right-li'><a href = 'http://localhost:".$_SERVER['SERVER_PORT']."/Projects/aiub project/Views/user_info.php'>Profile</a></li>";
+            {	
+            	echo "<img id='pro_pic' src='{$_SESSION['pro_pic']}'/>";
+				echo "<b class = 'navigationb'>Welcome ".$login->getUsername(). " , share your post!</b>";
+				echo "<a class = 'right-li' href = 'http://localhost:".$_SERVER['SERVER_PORT']."/Projects/aiub project/Views/action/logout.php'>Logout</a>";
+                echo "<a class = 'right-li' href = 'http://localhost:".$_SERVER['SERVER_PORT']."/Projects/aiub project/Views/user_info.php'>Profile</a>";
+            }
             else
-                echo "<li class = 'right-li'><a href = 'http://localhost:".$_SERVER['SERVER_PORT']."/Projects/aiub project/Views/signup.php'>Signup</a></li>";
+            {
+            	echo "<a class = 'right-li' href = 'login.php'>Login</a>";
+                echo "<a class = 'right-li' href = 'http://localhost:".$_SERVER['SERVER_PORT']."/Projects/aiub project/Views/signup.php'>Signup</a>";
+            }
             ?>
-            <li class = "right-li"><a href = 'http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub project/Views/crime_post.php'>Post Crime</a></li>
-            <li class = "right-li"><a href = 'http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub project/index.php'>Home</a></li>
-        </ul>
+            <a class = 'right-li' href = 'http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub project/Views/crime_post.php'>Post Crime</a>
+            <a class = 'right-li' href = 'http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub project/index.php'>Home</a>
     </navigation>
     <noscript><h4 style = "color:red;">Enable Javascript in your browser to access all the features of this web page.</h4></noscript>
 
@@ -67,13 +73,14 @@
                     $blogger = $blogControl->bloggerName($blogger_id);
                 }
                 echo "<div id=\"blog-container-contents\">";
-                echo "<p class ='blog_title'>".$blog["title"]."</p>".checkRemovalbeBlog($blog["blog_id"] , $userId);
-                echo "<p class = \"datetime\">".$blog["datetime"]."</p>";
-                echo "<p class = \"body\">".$blog["body"]."</p>";
-                echo "<p class =\"bold-blog-content\">Location: ".$blog["location"]."</p>";
-                echo "<p class =\"bold-blog-content\">Category: ".$blog["category"]."</p>";
+                    echo "<img id='pro_pic' src='{}'/>";
+                    echo "<p id =\"blogger_name\">".$blogger."</p>";
+                    echo "<p class ='blog_title'>".$blog["title"]."</p>".checkRemovalbeBlog($blog["blog_id"] , $userId);
+                    echo "<p class = \"datetime\">".$blog["datetime"]."</p>";
+                    echo "<p class = \"body\">".$blog["body"]."</p>";
+                    echo "<p class =\"bold-blog-content\">Location: ".$blog["location"]."</p>";
+                    echo "<p class =\"bold-blog-content\">Category: ".$blog["category"]."</p>";
                 //echo $blog["attachment"]; //need to fix this
-                echo "<p class =\"bold-blog-content\">By-----".$blogger."</p>";
                 echo "</div>";
                 echo "<hr>";
                 echo "<p id = \"comment-title\">Comments</p>";
