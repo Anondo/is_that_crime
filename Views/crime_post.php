@@ -23,7 +23,6 @@
 				{
 					echo "<img id='pro_pic' src='{$_SESSION['pro_pic']}'/>";
 					echo "<b class = \"navigationb\">Welcome ".$login->getUsername(). " , share your post!</b>";
-				
 				}
 				else
 				{
@@ -41,7 +40,7 @@
 
     <article>
     	<div id = "post-container-box">
-    	<form name = "blog_form" method = "POST" action = "action/putblog.php" enctype="multipart/form-data" onsubmit="return updateCrimeOnLocation(blog_form.location.value)">
+    	<form name = "blog_form" method = "POST" action = "action/putblog.php" enctype="multipart/form-data"  onsubmit="return updateCrimeOnLocation(this.location.value)">
 
 			<div id="div-title-post">
 				<input type="text" id ="title-post" name="title" placeholder="Title" onkeyup="nothing_wrong()">
@@ -78,13 +77,12 @@
    				<label><b> Description : </b></label><br>
 				<textarea id="description-body" name="body" cols = "120" rows="6" placeholder=" write here ...." onkeyup="nothing_wrong()"></textarea>
 			</div>
-
 			<div id="div-button-etc">
 		 		<br><button id="post-button" onclick="return nothing_wrong()"> post</button>
 				<input type="checkbox" name="hideme" value = "hide me"> <strong>hide me </strong>
 				<input type = "file" name = "attchmnt" />
 			</div>
-    
+
 			<span id = "blogDetails_error" style="color:red;"></span>
 		</form>
 	</div>
