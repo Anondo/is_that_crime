@@ -78,18 +78,19 @@ body{
     font-style: italic;
 }
 
-hr { border: 1px solid white;clear: both; margin-top:30px; width: 300px; }
+hr { border: 1px solid white;clear: both; margin-top:30px; width: 80%; }
 
 .blog_title{
-    font-size: 25px;
+    font-size: 35px;
     padding: 0px;
     text-decoration: none;
     font-family: 'Tahoma';
     text-transform: capitalize;
-    font-weight: bold;
+    font-weight:bold;
     color:black;
+
 }
-.blog_title:hover{
+a .blog_title:hover{
     color:red;
     background-color: transparent;
 }
@@ -103,26 +104,32 @@ hr { border: 1px solid white;clear: both; margin-top:30px; width: 300px; }
 
 }
 .body{
-     font-size: 16px;
+    font-size: 16px;
     letter-spacing: 1.5;
     font-family: 'Tahoma';
     word-spacing: 1;
     color: black;
 }
 .bold-blog-content{
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     line-height: 0.6;
     font-family: 'Tahoma';
     color: black;
-    text-align: center;
+    text-align: left;
 }
 .circled_pro_pic{
     width: 30px;
     height: 30px;
     border:2px solid white;
     border-radius:50px;
+    float: left;
     
+}
+.rectangular_pro_pic{
+    width: 40px;
+    height: 40px;
+    border:2px solid white;
 }
 
 /*=============================
@@ -131,10 +138,10 @@ BLOG
 #blog-container{
     max-width:60%;
     height:auto;
-    background-color: darkslategray;
+    background-color:#c2c2c2;
     color:black;
     border:3px solid grey;
-    padding: 5px 20px 10px 20px;
+    padding: 20px 20px 10px 20px;
     margin: 0;
     text-align: justify;
 }
@@ -143,8 +150,11 @@ BLOG
     max-width:100%;
     height:auto;
     border:2px solid transparent;
+    background-color: #a6a6a6;
+    padding-top: 20px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 20px;
 }
 
 #delete-button{
@@ -154,13 +164,14 @@ BLOG
     font-weight: bold;
     width:4%;
     height:4%;
+    float:right;
 }
 #blogger_name{
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 25px;
+    font-weight: normal;
     line-height: 0.6;
     font-family: 'Tahoma';
-    color: white;
+    color: black;
     border:2px solid transparent;
-    padding:5px 0px 0px 15px;
+    padding:10px 0px 10px 0px;
 }
