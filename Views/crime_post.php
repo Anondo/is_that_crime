@@ -9,6 +9,7 @@
 
 	<script src = "http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub project/js/blog_handler.js"></script>
 	<script src = "http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub project/js/location_handler.js"></script>
+	<script src = "http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/js/default_pp_setter.js"></script>
 </head>
 <body>
 <div>
@@ -21,7 +22,7 @@
 				$login = new Login();
 				if($login->isLogged())
 				{
-					echo "<img id='pro_pic' src='{$_SESSION['pro_pic']}'/>";
+					echo "<img id='pro_pic' src='{$_SESSION['pro_pic']}' onerror='return setDefaultPP(this)'/>";
 					echo "<b class = \"navigationb\">Welcome ".$login->getUsername(). " , share your post!</b>";
 				}
 				else

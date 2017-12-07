@@ -77,7 +77,7 @@
                             echo "<p class=\"bold-blog-content\">Location - ".$row["location"]. "</p>";
                             echo "<p class=\"bold-blog-content\">Category - ".$row["category"]. "</p>";
                             echo "<p class=\"bold-blog-content\">By - $blogger</p>";
-                            echo "<p class=\"bold-blog-content\"><img class='circled_pro_pic' src='$blogger_pp'/></p>";
+                            echo "<p class=\"bold-blog-content\"><img class='circled_pro_pic' src='$blogger_pp' onerror='return setDefaultPP(this)'/></p>";
 
                             echo "<hr/>";
                         echo "</div>";
