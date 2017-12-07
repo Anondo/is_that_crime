@@ -3,7 +3,7 @@
 <html>
 <head>
 	<title>Post</title>
-	<link rel="stylesheet" type="text/css" href="../css/index_style.css">
+	
 	<link rel="stylesheet" type="text/css" href="../css/navigation.css">
 	<link rel="stylesheet" type="text/css" href="../css/postcrime_style.css">
 
@@ -75,7 +75,7 @@
 			</div>
 			<div id="div-description-body">
    				<label><b> Description : </b></label><br>
-				<textarea id="description-body" name="body" cols = "120" rows="6" placeholder=" write here ...." onkeyup="nothing_wrong()"></textarea>
+				<textarea id="description-body" name="body" cols = "120" rows="6" style="resize:none;" placeholder=" write here ...." onkeyup="nothing_wrong()"></textarea>
 			</div>
 			<div id="div-button-etc">
 		 		<br><button id="post-button" onclick="return nothing_wrong()"> post</button>
