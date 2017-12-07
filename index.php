@@ -3,6 +3,7 @@
     <title>Is That Crime!</title>
     <link rel="stylesheet" type="text/css" href="css/index_style.css">
     <link rel="stylesheet" type="text/css" href="css/navigation.css">
+    <script src = 'js\default_pp_setter.js'></script>
 </head>
 
 
@@ -20,7 +21,7 @@
             $login = new Login();
             if($login->isLogged())
             {
-                echo "<img id='pro_pic' src='{$_SESSION['pro_pic']}'/>";
+                echo "<img id='pro_pic' src='{$_SESSION['pro_pic']}' onerror='return setDefaultPP(this)'/>";
 				echo "<b class = \"navigationb\">Welcome ". $login->getUsername(). "</b>";
                 echo "<a class = \"right-li\" href = 'Views/action/logout.php'>Logout</a>";
             }
