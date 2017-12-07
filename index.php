@@ -13,28 +13,28 @@
             Navigation Bar
         ============================ -->
     <navigation>
-        <ul>
+        
             <?php
 
             require("Controllers/login_controller.php");
             $login = new Login();
             if($login->isLogged())
             {
-                echo "<li><img id='pro_pic' src='{$_SESSION['pro_pic']}'/></li>";
-				echo "<li><b class = \"navigationb\">Welcome ". $login->getUsername(). "</b></li>";
-                echo "<li class = \"right-li\"><a href = 'Views/action/logout.php'>Logout</a></li>";
+                echo "<img id='pro_pic' src='{$_SESSION['pro_pic']}'/>";
+				echo "<b class = \"navigationb\">Welcome ". $login->getUsername(). "</b>";
+                echo "<a class = \"right-li\" href = 'Views/action/logout.php'>Logout</a>";
             }
             else
             {
-                echo "<li><b class = \"navigationb\">Hello World</b></li>";
-                echo "<li class = \"right-li\"><a href = 'Views/login.php'>Login</a></li>";
+                echo "<b class = \"navigationb\">Hello World</b>";
+                echo "<a class = \"right-li\" href = 'Views/login.php'>Login</a>";
             }
             if($login->isLogged())
-                echo "<li class = \"right-li\"><a href = 'Views/user_info.php'>Profile</a></li>";
+                echo "<a class = \"right-li\" href = 'Views/user_info.php'>Profile</a>";
             else
-                echo "<li class = \"right-li\"><a href = 'Views/signup.php'>Signup</a></li>";
-                echo "<li class = \"right-li\"><a href = 'Views/crime_post.php'>Post Crime</a></li>";
-                echo " <li class = \"right-li\"><a href = 'http://localhost:".$_SERVER['SERVER_PORT']."/Projects/aiub project/index.php'>Home</a></li>";
+                echo "<a class = \"right-li\" href = 'Views/signup.php'>Signup</a>";
+                echo "<a class = \"right-li\" href = 'Views/crime_post.php'>Post Crime</a>";
+                echo "<a class = \"right-li\" href = 'http://localhost:".$_SERVER['SERVER_PORT']."/Projects/aiub project/index.php'>Home</a>";
             ?>
         </ul>
     </navigation>
@@ -58,7 +58,7 @@
                         $body = $row["body"];
                         if(strlen($body) > 50) //not showing the entire content in the index page
                         {
-                            $body = substr($body , 0 , 51);
+                            $body = substr($body , 0 , 100);
                             $body = $body."..........";
                         }
                         if(!$row["name_hidden"]) //if the user wants to share his/her name
@@ -74,6 +74,8 @@
                             echo "<p class=\"bold-blog-content\">Location - ".$row["location"]. "</p>";
                             echo "<p class=\"bold-blog-content\">Category - ".$row["category"]. "</p>";
                             echo "<p class=\"bold-blog-content\">By - $blogger</p>";
+                            echo "<p class=\"bold-blog-content\"><img class='circled_pro_pic' src='{}'/></p>";
+
                             echo "<hr/>";
                         echo "</div>";
                         echo "</div>";
@@ -91,7 +93,7 @@
         </div>
 
         <div id = "right-content">
-            <input type="text" name="serach" id = "searchbox" placeholder="search">
+            <input type="text" name="serach" id = "searchbox" placeholder="search.....">
             <select name="by" id = "searchby">
                     <option value = "by"> By </option>
                     <option value = "category"> Category </option>
@@ -101,6 +103,8 @@
             </select>
         </div>
 </article>
+
+<footer></footer>
 
 </div>
 </body>
