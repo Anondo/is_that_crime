@@ -2,7 +2,7 @@
 <head>
     <script src = "http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/js/comment_handler.js"></script>
     <script src = "http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/js/blog_handler.js"></script>
-    
+
     <link rel="stylesheet" type="text/css" href="http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/css/navigation.css">
     <link rel="stylesheet" type="text/css" href="http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/css/blog_style.css">
     <link rel="stylesheet" type="text/css" href="http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/css/comment_style.css">
@@ -41,7 +41,7 @@
     <navigation>
             <?php
             if($logged)
-            {	
+            {
             	echo "<img id='pro_pic' src='{$_SESSION['pro_pic']}'/>";
 				echo "<b class = 'navigationb'>Welcome ".$login->getUsername(). " , share your post!</b>";
 				echo "<a class = 'right-li' href = 'http://localhost:".$_SERVER['SERVER_PORT']."/Projects/aiub project/Views/action/logout.php'>Logout</a>";
@@ -66,15 +66,17 @@
                 $id = $_GET["blog_id"];
                 $blog = $blogControl->getBlog($id);
                 $blogger = "Anonymous"; //the blogger name is initially anonymous for safety
+                $blogger_pp = "";
                 if(!$blog["name_hidden"]) //if the user chooses to show his/her name
                 {
                     $blogger_id = $blog["blogger_id"];
                     $blogger = $blogControl->bloggerName($blogger_id);
+                    $blogger_pp = $blogControl->getBloggerProfilePicture($blogger_id);
                 }
                 echo "<div id=\"blog-container-content\">";
 
                     # need valid url of the blogger of the blog
-                    echo "<img class='rectangular_pro_pic' src='{}'/>";
+                    echo "<img class='rectangular_pro_pic' src='$blogger_pp'/>";
 
                     echo "<b id =\"blogger_name\">".$blogger."</b>";
                     echo "<p class ='blog_title'>".$blog["title"]."</p>".checkRemovalbeBlog($blog["blog_id"] , $userId);
@@ -82,7 +84,7 @@
                     echo "<p class = \"body\">".$blog["body"]."</p>";
                     echo "<p class =\"bold-blog-content\">Location: ".$blog["location"]."</p>";
                     echo "<p class =\"bold-blog-content\">Category: ".$blog["category"]."</p>";
-               
+
                 if($blog["attachment"])
                 {
                     $video = false;
@@ -119,7 +121,7 @@
                 }
                 echo "<hr>";
                 echo "</div>";
-               
+
                 echo "<p id = \"comment-title\">Comments</p>";
                 $commentResult = $comment->getCommentByBlog($id);
                 if($commentResult)

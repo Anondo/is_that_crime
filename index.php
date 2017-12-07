@@ -13,7 +13,7 @@
             Navigation Bar
         ============================ -->
     <navigation>
-        
+
             <?php
 
             require("Controllers/login_controller.php");
@@ -56,6 +56,7 @@
 
                         $blogger = "Anonymous"; //blogger name initially anonymous for protection
                         $body = $row["body"];
+                        $blogger_pp = "";
                         if(strlen($body) > 50) //not showing the entire content in the index page
                         {
                             $body = substr($body , 0 , 100);
@@ -65,6 +66,7 @@
                         {
                             $blogger_id = $row["blogger_id"];
                             $blogger = $blog->bloggerName($blogger_id);
+                            $blogger_pp = $blog->getBloggerProfilePicture($blogger_id);
                         }
                         echo "<div id = \"single_blog\">";
                         echo "<div id =\"single_blog_content\">";
@@ -74,7 +76,7 @@
                             echo "<p class=\"bold-blog-content\">Location - ".$row["location"]. "</p>";
                             echo "<p class=\"bold-blog-content\">Category - ".$row["category"]. "</p>";
                             echo "<p class=\"bold-blog-content\">By - $blogger</p>";
-                            echo "<p class=\"bold-blog-content\"><img class='circled_pro_pic' src='{}'/></p>";
+                            echo "<p class=\"bold-blog-content\"><img class='circled_pro_pic' src='$blogger_pp'/></p>";
 
                             echo "<hr/>";
                         echo "</div>";
