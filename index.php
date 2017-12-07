@@ -70,14 +70,15 @@
                             $blogger_pp = $blog->getBloggerProfilePicture($blogger_id);
                         }
                         echo "<div id = \"single_blog\">";
-                        echo "<div id =\"single_blog_content\">";
-                            echo "<h5>"."<a class = \"blog_title\" href = 'Views/blog.php/?blog_id=".$row['blog_id']."'>".$row['title']."</a></h5>";
+            
+                            echo "<div id='div_blog_title'>"."<a class = \"blog_title\" href = 'Views/blog.php/?blog_id=".$row['blog_id']."'>".$row['title']."</a></div>";
+                            echo "<div id =\"single_blog_content\">";
                             echo "<p class = \"datetime\">{$row['datetime']}</p>";
                             echo "<p class = \"body\">$body</p><br>";
                             echo "<p class=\"bold-blog-content\">Location - ".$row["location"]. "</p>";
                             echo "<p class=\"bold-blog-content\">Category - ".$row["category"]. "</p>";
                             echo "<p class=\"bold-blog-content\">By - $blogger</p>";
-                            echo "<p class=\"bold-blog-content\"><img class='circled_pro_pic' src='$blogger_pp'/></p>";
+                            echo "<p class=\"bold-blog-content\"><img class='circled_pro_pic' src='$blogger_pp' onerror='return setDefaultPP(this)'/></p>";
 
                             echo "<hr/>";
                         echo "</div>";
