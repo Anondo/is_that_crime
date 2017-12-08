@@ -135,7 +135,7 @@ $role = $user["role"];
                         </select>
             </div>
             
-			<br><input type="submit" name="update_button" value="Update">
+			<br><input type="submit" id="update-button" name="update_button" value="Update">
    		 </form>
         </div>
     </article>

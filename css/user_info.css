@@ -6,7 +6,7 @@
     border-style: none;
     border-left:3px solid black;
     border-right:3px solid black;
-    padding: 10px 20px;
+    padding: 10px 20px 40px 20px;
     margin: 0 auto;
 }
 #data-section{
@@ -27,6 +27,9 @@
     font-size: 16px;
     box-sizing: border-box;
 }
+.input:hover{
+     border-bottom: 3px solid darkgrey;
+}
 label{
     line-height:;
     font-size: 18px;
@@ -44,10 +47,13 @@ select{
     border-color: transparent;
     border-style: none;
     border-bottom: 2px solid black;
-    padding: 6px 4px;
+    padding: 6px 10px 6px 10px;
     margin-bottom: 10px;
     font-size: 16px;
     box-sizing: border-box;
+}
+select:hover{
+    border-bottom: 3px solid darkgrey;
 }
 #day{
     width:25%;
@@ -96,4 +102,30 @@ select{
     box-sizing: border-box;
     width: 100%;
     text-align: center;
+}
+#imginput-button:hover{
+    background-color: black;
+    color:white;
+}
+
+#update-button{
+    width: 15%;
+    height: auto;
+    border:none;
+    border-radius: 5px;
+    padding: 8px 20px;
+    background-color:black;
+    color: lightgrey;
+    text-align: center;
+    font-family: "";
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top:20px;
+    float: right;
+    box-sizing: border-box;
+}
+#update-button:hover{
+    background-color: darkgrey;
+    color: black;
 }
