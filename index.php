@@ -44,10 +44,14 @@
 <!--================================
             BLOGs
 ====================================-->
-<div id="index-content">
+
 <article>
+<div id="index-content">
     <noscript><h4 style = "color:red; text-align: center;">Enable Javascript in your browser to access all the features of this web page.</h4></noscript>
-     <div id = "all_blogs">
+
+         <div id = "all_blogs">
+            <b class="labels">Crime Map</b>
+            <div id="map-canvas"></div>
 
             <?php
 
@@ -109,9 +113,11 @@
                     <option value = "title"> title </option>
             </select>
         </div>
-        <div id="map-canvas" style="height:300px; width:300px"></div>
-</article>
+    
 </div>
+</article>
+
 <footer></footer>
+</div>
 </body>
 </html>
