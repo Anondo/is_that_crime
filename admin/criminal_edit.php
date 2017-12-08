@@ -14,7 +14,7 @@ if(isset($_GET["criminal_id"]))
     $day = $bdate[0];
     $month = $bdate[1];
     $year = $bdate[2];
-    $criminalname  = $criminal["username"];
+    $criminalname  = $criminal["fname"]." ".$criminal["lname"];
     $email = $criminal["email"];
     $pro_pic = $criminal["pro_pic"];
     $gender = $criminal["gender"];
@@ -22,11 +22,11 @@ if(isset($_GET["criminal_id"]))
 <html>
 <head>
     <title><?php echo $criminalname ?> |Criminal Information</title>
-    <script src = "http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/js/admin_user_handler.js"></script>
+    <script src = "http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/js/admin_criminal_handler.js"></script>
     <link rel="stylesheet" href="http://localhost:<?php echo $_SERVER['SERVER_PORT'] ?>/Projects/aiub project/css/admin_user_edit.css"/>
 </head>
 <body>
-    <form name = "criminal_update_form" action="" method="POST" enctype="multipart/form-data" onsubmit = "return validate(<?php echo $id ?>)">
+    <form name = "criminal_update_form" action="criminal_update.php?criminal_id=<?php echo $id ?>&pp=<?php echo $pro_pic ?>" method="POST" enctype="multipart/form-data" onsubmit = "return validate()">
 
                 <label>Change Your Profile Picture :</label>
                 <br><img id = "pro_pic" src='<?php echo $pro_pic ?>'/>
@@ -84,12 +84,8 @@ if(isset($_GET["criminal_id"]))
                 	   	               	   </select>
                                 </span>
 
-            	<br><label>User Name :</label>
-                <br><input type="text" name="uname" placeholder="User Name..."  onkeyup="usernameValidate(this.value,<?php echo $id ?>)" value="<?php echo $criminalname;?>"/>
-                <span id="username_error" style="color:red;"></span>
-
             	<br><label>Email Address :</label>
-                <br><input type="text" name="email" placeholder="xyz@dmail.com..." onkeyup="emailValidate(this.value,<?php echo $id ?>)" value="<?php echo $email;?>"/>
+                <br><input type="text" name="email" placeholder="xyz@dmail.com..." onkeyup="emailValidate(this.value)" value="<?php echo $email;?>"/>
                 <span id="email_error" style="color:red;"></span>
 
             	<br><label>Gender :</label>

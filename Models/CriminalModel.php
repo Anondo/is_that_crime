@@ -59,6 +59,13 @@ class CriminalModel extends Models{
         $lname = $result["lname"];
         return $fname." ".$lname;
     }
+    function getCriminalUsername($id)
+    {
+        $result = $this->executeQuery("select username from criminals where criminal_id = $id and del = false");
+        $result = $result->fetch_assoc();
+        $username = $result["username"];
+        return $username;
+    }
 
 }
 
