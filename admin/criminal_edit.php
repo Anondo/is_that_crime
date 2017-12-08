@@ -39,7 +39,7 @@ if(isset($_GET["criminal_id"]))
 
 
                 <br><label>Birthdate :</label>
-                <br><span>Day <select name="day" >
+                <br><span>Day :<select name="day" >
                                             <?php
                                             for($i = 1; $i<=31 ; $i++)
                                             {
@@ -70,7 +70,7 @@ if(isset($_GET["criminal_id"]))
                 	   	                   </select>
 
 
-                	                    Year
+                	                    Year :
                 	   	               	   <select name="year">
                                                <?php
                                                 for($i = 1935; $i <= date("Y"); $i++)
