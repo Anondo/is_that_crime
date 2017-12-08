@@ -1,28 +1,31 @@
 #profile_Form{
-	max-width:75%;
+	max-width:80%;
     height:auto;
-    background-color: darkslategrey ;
+    background-color:white;
     border-color:transparent;
     border-style: none;
     border-left:3px solid black;
     border-right:3px solid black;
-    padding: 20px 40px;
+    padding: 10px 20px;
     margin: 0 auto;
 }
 #data-section{
-    max-width: 50%;
+    max-width: 75%;
+    padding:10px 2px 10px 5px ;
+    background-color: transparent; 
 }
 .input{
     width: 100%;
     height: 50px;
-    background-color:lightgrey ;
+    background-color:transparent;
     color: black;
     border-color: transparent;
     border-style: none;
-    border-bottom: 2px solid darkgrey;
+    border-bottom: 2px solid black;
     padding: 12px 10px;
     margin-bottom:20px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 label{
     line-height:;
@@ -36,15 +39,18 @@ label{
 select{
     width: 25%;
     height: 40px;
-    background-color:lightgrey ;
+    background-color:transparent;
     color: black;
-    border: 2px solid darkgrey;
+    border-color: transparent;
+    border-style: none;
+    border-bottom: 2px solid black;
     padding: 6px 4px;
     margin-bottom: 10px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 #day{
-    width:10%;
+    width:25%;
 }
 
 /*=======Image upload section===========*/
@@ -64,7 +70,7 @@ select{
 }
 #img-label{
     font-size: 14px;
-    color:white;
+    color:color;
     border:2px solid transparent;
     padding: 0px 5px 5px 0px;
     float: left;
