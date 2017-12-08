@@ -44,8 +44,9 @@
 <!--================================
             BLOGs
 ====================================-->
-
+<div id="index-content">
 <article>
+    <noscript><h4 style = "color:red; text-align: center;">Enable Javascript in your browser to access all the features of this web page.</h4></noscript>
      <div id = "all_blogs">
 
             <?php
@@ -107,13 +108,10 @@
                     <option value = "user"> User </option>
                     <option value = "title"> title </option>
             </select>
-            </div>
-            <div id="map-canvas" style="height:300px; width:300px">
         </div>
+        <div id="map-canvas" style="height:300px; width:300px"></div>
 </article>
-
-<footer></footer>
-
 </div>
+<footer></footer>
 </body>
 </html>
