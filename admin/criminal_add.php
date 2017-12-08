@@ -2,7 +2,7 @@
 <head>
 	<title>Criminal SignUP Page</title>
 	<script src = "../js/criminal_handler.js"></script>
-   
+
   <link rel="stylesheet" type="text/css" href="http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/css/admin_navigation.css">
   <link rel="stylesheet" type="text/css" href="../css/signup_style.css">
 </head>
@@ -40,8 +40,6 @@
     <noscript><h4 style = "color:red; text-align: center;">Enable Javascript in your browser to access all the features of this web page.</h4></noscript>
 
     <h3 id = "signup-title">Create an Account For Criminal</h3>
-
-    <?php session_start();?>
     <div id = "signup-form">
         <form name = "criminal_form" action = "http://localhost:<?php echo $_SERVER['SERVER_PORT'] ?>/Projects/aiub project/admin/putCriminal.php" method = "POST" enctype="multipart/form-data" onsubmit="return validate()">
 
