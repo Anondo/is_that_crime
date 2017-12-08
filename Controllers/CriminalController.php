@@ -15,6 +15,10 @@ class CriminalController{
     {
         return $this->criminal->getFullName($id);
     }
+    function getCriminal($id)
+    {
+        return $this->criminal->getCriminal($id);
+    }
     function getAllCriminals()
     {
         return $this->criminal->getAllCriminals();
