@@ -3,7 +3,7 @@ var total_marker_count = getMarkerCount();
 var crimeZones = getCrimeZones();
 var marker_icon = {
      url: "http://localhost:"+location.port+"/Projects/aiub project/img/marker.png", // url
-     scaledSize: new google.maps.Size(60, 60), // size
+     scaledSize: new google.maps.Size(40, 40), // size
      origin: new google.maps.Point(0,0), // origin
      anchor: new google.maps.Point(0, 0) // anchor
  };
