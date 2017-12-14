@@ -8,6 +8,8 @@
 
     <script src = "http://localhost:<?php echo $_SERVER['SERVER_PORT']; ?>/Projects/aiub project/js/criminal_handler.js"></script>
     <script src = 'http://localhost:<?php echo $_SERVER['SERVER_PORT']; ?>/Projects/aiub project/js/default_pp_setter.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src = 'http://localhost:<?php echo $_SERVER['SERVER_PORT']; ?>/Projects/aiub project/js/criminal_filter.js'></script>
 
     <?php
     require_once(get_include_path()."\Projects\aiub project\Controllers\AdminController.php");
@@ -26,7 +28,7 @@
  <navigation>
         <ul>
             <?php
-            
+
                 if($admincontrol->isLogged())
                 {
                     echo "<li><b class = \"navigationb\">Welcome ". $admincontrol->getUsername(). "</b></li>";
@@ -50,10 +52,13 @@
             <div id = "right-content">
             <input type="text" name="serach" id = "searchbox" placeholder="search by">
             <select name="by" id = "searchby">
-                    <option value = "location"> Location </option>
-                    <option value = "category"> Category </option>
-                    <option value = "username"> User </option>
-                    <option value = "title"> title </option>
+                <option value = "username"> Username </option>
+                <option value = "fname"> First Name </option>
+                <option value = "lname"> Last Name </option>
+                <option value = "gender"> Gender </option>
+                <option value = "abelow"> Age(below) </option>
+                <option value = "aabove"> Age(above) </option>
+                <option value = "email"> Email </option>
             </select>
         </div>
         </ul>
@@ -81,7 +86,7 @@
     {
         while($criminal = $criminals->fetch_assoc())
     	{
-            echo "<tr id='{$criminal['criminal_id']}'>
+            echo "<tr id='{$criminal['criminal_id']}' class='criminals'>
                     <td>{$criminal['fname']}</td>
                     <td>{$criminal['lname']}</td>
                     <td>{$criminal['age']}</td>
