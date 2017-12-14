@@ -1,4 +1,4 @@
-body{
+html,body{
     margin:0px;
     padding: 0px;
 }
@@ -8,14 +8,10 @@ article{
 }
  nav{
     float:left;
-    width:10%;
-    background-color:red;
-    text-align:left;
+    width:5%;
+    background-color:orange;
     position: fixed;
     }
-ul{
-    list-style-type:none;
-}
 #section-1{
     width:100%;
     height:100%;
@@ -72,11 +68,11 @@ ul{
 
 }
 #index-content{
-    width: 90%;
+    width:95%;
     height:auto;
     background-color:transparent;
-    border:2px solid black;
     float: right;
+    position:;
 }
 #all_blogs{
     width:75%;

@@ -41,7 +41,6 @@
                 echo "<a class = \"right-li\" href = 'Views/crime_post.php'>Post Crime</a>";
                 echo "<a class = \"right-li\" href = 'http://localhost:".$_SERVER['SERVER_PORT']."/Projects/aiub project/index.php'>Home</a>";
             ?>
-        </ul>
     </navigation>
 <!--================================
             BLOGs
@@ -49,11 +48,10 @@
 
         
 <article>
-    <nav>
-             <ul>
-                 <li>  <a href="#section-1"> maps </a> </li>
-                 <li> <a href="#section-2"> blogs </a> </li>
-              </ul>
+        <nav>
+            <a href="#"> <img src="img/gohome.png" width="40px" height="40px"></a>
+            <a href="#section-1"> <img src="img/location_pointer.png" width="40px" height="40px"></a>
+            <a href="#section-2"> <img src="img/chat.png" width="40px" height="40px"></a>
         </nav>
 <div id="index-content">
     <noscript><h4 style = "color:red; text-align: center;">Enable Javascript in your browser to access all the features of this web page.</h4></noscript>
