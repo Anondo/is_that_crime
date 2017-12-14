@@ -47,14 +47,26 @@
             BLOGs
 ====================================-->
 
+        
 <article>
+    <nav>
+             <ul>
+                 <li>  <a href="#section-1"> maps </a> </li>
+                 <li> <a href="#section-2"> blogs </a> </li>
+              </ul>
+        </nav>
 <div id="index-content">
     <noscript><h4 style = "color:red; text-align: center;">Enable Javascript in your browser to access all the features of this web page.</h4></noscript>
 
-         <div id = "all_blogs">
-            <b class="labels">Crime Map</b>
-            <div id="map-canvas"></div>
 
+    <div id="section-1">
+        <b class="labels">Crime Map</b>
+        <div id="map-canvas"></div>    
+    </div>
+
+    <div id = "section-2">
+        <div id = "all_blogs">
+            
             <?php
 
                 require_once("Controllers/BlogController.php");
@@ -120,6 +132,10 @@
                     <option value = "title"> title </option>
             </select>
         </div>
+
+        
+    </div>
+         
 
 </div>
 </article>
