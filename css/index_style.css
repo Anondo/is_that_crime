@@ -54,7 +54,7 @@ ul{
     border:2px solid transparent;
     border-radius:;
     box-sizing: border-box;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 5px 0px;
 }
 
 .single_blog:nth-child(odd){
