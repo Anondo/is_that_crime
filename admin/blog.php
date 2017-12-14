@@ -43,10 +43,21 @@
                     <a href = "criminal.php" > Manage Criminals </a>
                 </div>
             </li>
+			
+			<div id = "right-content">
+            <input type="text" name="serach" id = "searchbox" placeholder="search by">
+            <select name="by" id = "searchby">
+                    <option value = "location"> Location </option>
+                    <option value = "category"> Category </option>
+                    <option value = "user"> User </option>
+                    <option value = "title"> title </option>
+            </select>
+        </div>
         </ul>
     </navigation>
      <article>
          <div>
+		
    <?php
     $blogs = $blogcontrol->getAllBlogs();
     echo "<table border = '2'>";
