@@ -74,10 +74,13 @@ class BlogModel extends Models{
         else
             return false;
     }
-	
+
 	function blogByKeyValue($key , $value)
 	{
-		$result = $this->executeQuery("Select * from blogs where $key='$value'");
+        if($key == "username")
+            $result = $this->executeQuery("select * from blogs where blogger_id in(select user_id from users where username LIKE '%$value%')");
+        else
+		      $result = $this->executeQuery("Select * from blogs where $key LIKE '%$value%'");
 		$blogs = array();
 		if($result)
 		{
@@ -90,7 +93,7 @@ class BlogModel extends Models{
 		}
 		return false;
 	}
-	
+
     function putBlog($title , $body , $datetime , $attachment , $user_id , $name_hidden , $location , $category , $noattch)
     {
         if($noattch)
