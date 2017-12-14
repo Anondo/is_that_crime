@@ -26,7 +26,7 @@
  <navigation>
         <ul>
             <?php
-            
+
                 if($admincontrol->isLogged())
                 {
                     echo "<li><b class = \"navigationb\">Welcome ". $admincontrol->getUsername(). "</b></li>";
