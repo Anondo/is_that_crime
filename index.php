@@ -7,6 +7,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=AIzaSyCF7ndFJ68221tpvVYDGMA4GAomtfb5MQA"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/blog_filter.js"></script>
+    <script src="js/animation.js"></script>
     <script src = 'js/map.js'></script>
 </head>
 
@@ -46,7 +47,7 @@
             BLOGs
 ====================================-->
 
-        
+
 <article>
     <nav>
         <a href="#"> <img src="img/gohome.png" width="40px" height="40px"></a>
@@ -60,10 +61,9 @@
         <div id="section-1">
             <div class="supporting-div"></div>
             <b class="labels">Crime Map</b>
-            <div id="map-canvas"></div>   
+            <div id="map-canvas"></div>
         </div>
-        <div class="section-footer"> Blog Section</div> 
-        
+
         <div id = "section-2">
             <div class="supporting-div"></div>
             <div id = "right-content">
@@ -77,7 +77,7 @@
             </div>
 
             <div id = "all_blogs">
-            
+
             <?php
 
                 require_once("Controllers/BlogController.php");
@@ -132,10 +132,9 @@
                     echo "</div>";
                 }
             ?>
-        </div>       
+        </div>
     </div>
-    <div class="section-footer"> section footer</div>
-         
+
 
 </div>
 </article>
