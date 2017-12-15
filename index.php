@@ -131,7 +131,7 @@
                             $blogger = $blog->bloggerName($blogger_id);
                             $blogger_pp = $blog->getBloggerProfilePicture($blogger_id);
                         }
-                        echo "<div class = 'single_blog   blogs'>";
+                        echo "<div class = 'single_blog   blogs' id={$row['blog_id']}>";
 
                             echo "<div id='div_blog_title'>"."<a class = \"blog_title\" href = 'Views/blog.php/?blog_id=".$row['blog_id']."'><span class='title'>".$title."</span></a></div>";
                             echo "<div class =\"single_blog_content\" class='blog'>";
