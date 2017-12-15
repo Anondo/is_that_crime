@@ -1,10 +1,6 @@
-html,body{
+body{
     margin:0px;
     padding:0px;
-    height:100%; 
-}
-article{
-    margin-top: 4.5%;
 }
 
 #pro_pic{
@@ -14,13 +10,14 @@ article{
 	border-radius:50px;
 	float:left;
 }
-navigation{
+.navigation{
     background-color:black;
     width: 100%;
-    overflow: hidden;
+    height: auto;
     top: 0px;
     position:fixed;
-    padding-right: 30px;
+    padding-right: 50px;
+    padding-left: 10px;
 }
 
 .navigationb{
