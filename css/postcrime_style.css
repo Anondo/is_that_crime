@@ -231,9 +231,12 @@ sup{
     color:red;
 }
 
+#div-attach{
+    padding-top: 10px;
+}
 #attach{
     width:0;
-    padding: 100px 0 0 0;
+    padding: 10px 0 0 0;
     height: 0px;
     display: inline-block;
     overflow: hidden;
