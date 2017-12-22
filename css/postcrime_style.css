@@ -230,3 +230,34 @@ strong{
 sup{
     color:red;
 }
+
+#div-attach{
+    margin-top:10px;
+}
+
+#attach{
+    width:0;
+    padding: 10px 0 0 0;
+    height: 0px;
+    display: inline-block;
+    overflow: hidden;
+}
+#attach-btn{
+    background: url(../img/gallery.png) no-repeat scroll 10px 2px;
+    font-size: 14px;
+    font-weight: bold;
+    border:1px solid white;
+    border-radius:50px;
+    background-color:#79d279;
+    color:white;
+    padding:10px 10px 0px 5px;
+    float: left;
+    box-sizing: border-box;
+    width: 25%;
+    height: 40px;
+    text-align: right;
+}
+#attach-btn:hover{
+    background-color: #39ac39;
+    color:white;
+}
