@@ -98,7 +98,7 @@
 						<textarea id="description-body" name="body" cols = "120" rows="8" style="resize:none;" placeholder=" write here ...." onkeyup="nothing_wrong()"></textarea>
 
 						<div id="div-attach">
-							<div id ="attach-btn" for="attach">Photo / Video</div>
+							<label id ="attach-btn" for="attach">Photo / Video</label>
 							<br><input id="attach" type = "file" name = "attchmnt" accept="audio/*,video/*,image/*" />
 						</div>
 					</div>
