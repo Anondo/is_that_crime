@@ -69,6 +69,15 @@
                 not the exact area inside Mohammedpur will be marked.Also the position of the marker may not be completely accurate</span>
             </div>
             <div id="sub-section-1-2">
+            <div id = "map-search">
+                <input type="text" name="search" id = "map-searchbox" placeholder="search by">
+                <select name="by" id = "map-searchby">
+                        <option value = "location"> Location </option>
+                        <option value = "category"> Category </option>
+                        <option value = "user"> User </option>
+                        <option value = "title"> title </option>
+                </select>
+            </div>
             <table id="crime_zone_table" border="1">
                 <tr>
                     <th>Location</th>
