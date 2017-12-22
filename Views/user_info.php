@@ -61,6 +61,7 @@ $role = $user["role"];
 		<div id="profile_Form">
 		<form name = "user_update_form" action="action/user_update.php?user_id=<?php echo $userid ?>&role=<?php echo $role ?>&pp=<?php echo $pro_pic ?>" method="POST" enctype="multipart/form-data" onsubmit = "return validate(<?php echo $userid ?>)">
 
+
             <div id="image-upload-section">
                 <label id="img-label">Current Profile Picture</label>
                 <br><img id="profile_pic" name="pro_pic" src="<?php echo $pro_pic ?>" onerror="return setDefaultPP(this)"/>
