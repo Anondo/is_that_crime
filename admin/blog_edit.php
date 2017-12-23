@@ -109,7 +109,7 @@ $name_hidden = $blog["name_hidden"];
                      else
                      {
                          echo "<p class =\"bold-blog-content\">Attachment:
-                         <img src = '{$blog['attachment']}' />
+                         <img src = '{$blog['attachment']}'  width='200' height='150'/>
                          </p>";
                      }
 
