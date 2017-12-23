@@ -1,6 +1,7 @@
 body{
     margin:0px;
     padding: 0px;
+    overflow: hidden;
 }
 article{
     margin-top: 0px;
@@ -163,7 +164,6 @@ tr td:hover {
     float:left;
     background-color:#f2ffe6;
     box-sizing: border-box;
-
 }
 .supporting-div{
     background-color: transparent;
@@ -172,11 +172,12 @@ tr td:hover {
 }
 #all_blogs{
     width:75%;
-    height:auto;
+    height:80%;
     padding: 5px 0px 5px 5px;
     float:left;
     background-color:;
     box-sizing: border-box;
+    overflow-y:scroll ;
 
 }
 .section-footer{
@@ -193,7 +194,7 @@ tr td:hover {
 .single_blog{
     background-color: Beige;
     width:30%;
-    height:40%;
+    height:50%;
     border: none;
     box-sizing: border-box;
     border-radius: 10px;
