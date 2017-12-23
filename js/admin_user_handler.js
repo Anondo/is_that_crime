@@ -18,6 +18,8 @@ function validate(id)
 }
 function passwordValidate(p , cp)
 {
+    if(p == "" || cp == "")
+        return true;
     var error = document.getElementById('password_error');
     var valid = true;
     var hasDigit = false;

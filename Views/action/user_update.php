@@ -16,6 +16,7 @@ if(!empty($_POST["fname"]) && !empty($_POST["lname"]) && !empty($_POST["day"]) &
     $uname = $_POST["uname"];
     $email = $_POST["email"];
     $pass = $_POST["pass"];
+    $cpass = $_POST["cpass"];
     $gender = $_POST["gender"];
     $previous_uname = $usercontrol->getUsername($id)["username"];
     $prevImageName = explode("/" , $pro_pic);
@@ -36,7 +37,7 @@ if(!empty($_POST["fname"]) && !empty($_POST["lname"]) && !empty($_POST["day"]) &
     chmod("{$_SERVER['DOCUMENT_ROOT']}/Projects/aiub project/uploads/$previous_uname" , 0777);
     rename("{$_SERVER['DOCUMENT_ROOT']}/Projects/aiub project/uploads/$previous_uname" , "{$_SERVER['DOCUMENT_ROOT']}/Projects/aiub project/uploads/$uname");
 
-    if(emailValidate($email) == true && passwordValidate($pass) == true && pictureValidate($imgname) == true)
+    if(emailValidate($email) == true && passwordValidate($pass , $cpass) == true && pictureValidate($imgname) == true)
    {
 
     $ok = $usercontrol->updateUser($id , $fname,$lname ,$day ,$month ,$year ,$uname ,$email,$pass ,$gender,$role , $pro_pic);
@@ -68,11 +69,18 @@ else
         }
     }
 
-  function passwordValidate($p)
+  function passwordValidate($p , $cp)
   {
+      if($p == "" || $cp == "")
+        return true;
     if(strlen($p) < 8) //password length cannot be less than 8
         {
             echo "<br/> Password length must of at least more than 8 characters!";
+            return false;
+        }
+        if($p != $cp)
+        {
+            echo "<br/> Passwords Do not match!";
             return false;
         }
         $hasSpChar = false;
