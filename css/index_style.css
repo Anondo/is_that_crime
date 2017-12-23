@@ -10,11 +10,14 @@ article{
     height: 100%;
 }
  nav{
-    margin-top: 4%;
+    margin-top: 4.4%;
     float:left;
     width:5%;
-    background-color:#ffa31a;
+    background-color:#ff6666;
     position: fixed;
+}
+nav a:hover{
+    background-color:#ff4d4d ;
 }
 #index-content{
     width:95%;
@@ -243,7 +246,7 @@ tr td:hover {
     height: auto;
 }
 
-hr { border: 1px solid white;clear: both;width:50%; }
+hr { border: 3px double orange;clear: both;width:50%; }
 
 .div_blog_title{
     width:100%;
@@ -279,7 +282,7 @@ hr { border: 1px solid white;clear: both;width:50%; }
 
 .bold-blog-content{
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 500;
     line-height: 0.9;
     font-family: 'Tahoma';
     color: black;

@@ -10,11 +10,11 @@ article{
 #profile_Form{
 	max-width:70%;
     height:auto;
-    background-color:;
+    background-color:beige;
     border-color:transparent;
     border-style: none;
-    border-left:1px solid black;
-    border-right:1px solid black;
+    border-left:3px double #ffb3b3;
+    border-right:3px double #ffb3b3;
     padding: 10px 20px 40px 20px;
     margin: 0 auto;
 }
@@ -30,21 +30,21 @@ article{
     color: black;
     border-color: transparent;
     border-style: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #ff8c1a;
     padding: 12px 10px;
     margin-bottom:20px;
     font-size: 16px;
     box-sizing: border-box;
 }
 .input:hover{
-     border-bottom: 3px solid darkgrey;
+     border-bottom: 3px solid #ff751a;
 }
 label{
     line-height:;
     font-size: 18px;
     font-family: '';
     font-weight:bold ;
-    color: black;
+    color: #ff751a;
     border:2px solid transparent;
 }
 
@@ -55,20 +55,23 @@ select{
     color: black;
     border-color: transparent;
     border-style: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #ff8c1a;
     padding: 6px 10px 6px 10px;
     margin-bottom: 10px;
     font-size: 16px;
     box-sizing: border-box;
 }
 select:hover{
-    border-bottom: 3px solid darkgrey;
+    border-bottom: 3px solid #ff751a;
 }
 #day{
     width:25%;
 }
 #date-input{
     color:black;
+}
+span{
+    color:#ff751a;
 }
 option{
     color:black;

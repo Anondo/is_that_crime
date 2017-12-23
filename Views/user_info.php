@@ -27,7 +27,6 @@ $role = $user["role"];
 <html>
 <head>
     <title><?php echo $username ?> Information</title>
-	<link rel="stylesheet" href="http://localhost:<?php echo $_SERVER['SERVER_PORT'] ?>/Projects/aiub project/css/index_style.css"/>
     <link rel="stylesheet" href="http://localhost:<?php echo $_SERVER['SERVER_PORT'] ?>/Projects/aiub project/css/navigation.css"/>
     <link rel="stylesheet" href="http://localhost:<?php echo $_SERVER['SERVER_PORT'] ?>/Projects/aiub project/css/user_info.css"/>
 
