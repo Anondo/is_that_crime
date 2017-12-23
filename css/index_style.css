@@ -57,11 +57,11 @@ article{
 th{
     width:50%;
     border:1px 2px 0px 2px;
-    border-color: #c6ebd9;
+    border-color: white;
     border-style:solid;
     padding: 3px 3px 3px 3px;
-    background-color:#339966; 
-    color: #c6ebd9; 
+    background-color:#b9d5aa; 
+    color: #80654d; 
     text-align: center;
 }
 td{
@@ -70,16 +70,17 @@ td{
     padding:8px 4px 8px 4px;
     text-align: center;
     text-transform: capitalize;
+    color: #80654d;
 }
 tr:nth-child(odd){
-    background-color:#e6f9ff;
+    background-color:#d9d9d9;
 }
 tr:nth-child(even){
-    background-color:#b3ecff;
+    background-color:rgb(234,234,234);
 }
 
 tr td:hover {
-    background-color:#ffd699;
+    background-color:rgb(234,234,234);
     font-size: 30px;
     color:;
 }
@@ -101,99 +102,66 @@ tr td:hover {
     height:400px;
     width:100%;
 }
+/*============================================================*/
 
-#map-search{
+/*==============================
+    SECTION 2
+===============================*/
+
+#left-content{
     background-color:transparent;
-    width:100%;
-    height:auto;
-    padding:5px 0px 5px 0px;
-    float:left;
-    clear: right;
-}
-#map-searchbox{
-    background: url(../img/search_icon.png) no-repeat scroll 7px 5px;
     width:70%;
-    height:5%;
-    background-color:#ffc266;
-    color: black;
-    border: 1px solid black;
-    border-right-color: transparent;
-    border-radius: 5px;
-    border-top-right-radius:0px;
-    border-bottom-right-radius:0px;
-    padding:5px 10px 5px 30px;
-    margin:0px 0px 0px 0px;
-    float:left;
-    box-sizing: border-box;
-
-}
-#map-searchby{
-    width:30%;
-    height:5%;
-    background-color:#ffc266;
-    color: black;
-    border: 1px solid black;
-    border-left:2px solid darkgrey;
-    border-radius: 5px;
-    border-top-left-radius:0px;
-    border-bottom-left-radius:0px;
-    padding:5px 2px 5px 2px;
-    float:;
-    cursor:pointer;
-    box-sizing: border-box;
-}
-
-#right-content{
-    background-color:transparent;
-    width:75%;
     height:auto;
     padding:5px 0px 5px 0px;
     float:left;
     clear: right;
 }
 #searchby{
-    width:30%;
-    height:8%;
-    background-color:grey;
-    color: black;
-    border: 1px solid black;
-    border-left:2px solid darkgrey;
+    width:40%;
+    height:6%;
+    background-color:#d0d0e1;
+    color: #52527a;
+    font-size: 16px;
+    font-weight:400;
+    border:none;
+    border-left:5px double #c2c2d6;
     border-radius: 5px;
     border-top-left-radius:0px;
     border-bottom-left-radius:0px;
-    padding:5px 2px 5px 2px;
-    float:;
+    padding:2px 5px 2px 10px;
     cursor:pointer;
     box-sizing: border-box;
 }
 #searchbox{
     background: url(../img/search_icon.png) no-repeat scroll 7px 7px;
-    width:70%;
-    height:8%;
-    background-color:grey;
-    color: black;
-    border: 1px solid black;
+    width:60%;
+    height:6%;
+    background-color:#d0d0e1;
+    color: #52527a;
+    font-size: 16px;
+    font-weight:300;
+    border: 1px solid #c1c1d7;
     border-right-color: transparent;
     border-radius: 5px;
     border-top-right-radius:0px;
     border-bottom-right-radius:0px;
-    padding:5px 10px 5px 30px;
+    padding:5px 10px 5px 40px;
     margin:0px 0px 0px 0px;
     float:left;
     box-sizing: border-box;
 
 }
-/*============================================================*/
+::placeholder{
+    color:#1a1a1a;
+    font-style: italic;
+}
 
-/*==============================
-    SECTION 2
-===============================*/
 #section-2{
     width:100%;
     height:auto;
     padding: 0px 5px 0px 5px;
     float:left;
-    background-color:;
+    background-color:#f2ffe6;
     box-sizing: border-box;
 
 }
@@ -223,18 +191,19 @@ tr td:hover {
 }
 
 .single_blog{
-    background-color: #c2c2c2;
+    background-color: Beige;
     width:30%;
     height:40%;
     border: none;
     box-sizing: border-box;
+    border-radius: 10px;
     margin: 0px 5px 5px 0px;
     float: left;
     position: relative;
 }
 
-.single_blog1 , .single_blog2{
-    background-color: #c2c2c2;
+.single_blog1{
+    background-color: transparent;
     width:100%;
     height:40%;
     border: none;
@@ -242,13 +211,25 @@ tr td:hover {
     margin: 0px 5px 5px 0px;
     position: absolute;
 }
+
+.single_blog2{
+    background-color: transparent;
+    width:100%;
+    height:40%;
+    border: none;
+    box-sizing: border-box;
+    margin: 0px 5px 5px 0px;
+    position: absolute;
+    display: none;
+}
 .single_blog1{
     z-index: 10;
 }
 .single_blog2{
     z-index: 1;
-    opacity: .2;
+
 }
+
 /*.single_blog:nth-child(odd){
    background-color: orange;
 }
@@ -270,57 +251,40 @@ tr td:hover {
     height: auto;
 }
 
-::placeholder{
-    color:#1a1a1a;
-    font-style: italic;
-}
-
 hr { border: 1px solid white;clear: both;width:50%; }
 
 .div_blog_title{
     width:100%;
     border:none;
-    border-bottom:1px solid white;
-    background-color: #0d0d0d;
+    border-bottom:5px dotted orange;
+    border-top: 4px solid #00cca3;
+    border-radius: 10px;
     box-sizing: border-box;
 }
-.div_blog_title:nth-child(odd){
-   background-color:;
-}
-.div_blog_title:nth-child(even){
-    background-color: #001a33;
-}
+
 .blog_title{
-    font-size: 25px;
+    font-size: 18px;
     text-decoration: none;
-    font-family: 'Tahoma';
-    text-transform: capitalize;
-    font-weight:normal;
-    word-spacing: 2;
+    font-family:'Tahoma';
+    text-transform:capitalize;
+    font-weight: 300;
+    word-spacing:2;
     color:white;
-    padding: 6px 8px 10px 8px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2px 2px 5px 2px;
+    background-color:orange;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.div_blog_title:hover{
+    border-bottom:5px dotted black;
 }
 .blog_title:hover{
     color:orange;
-    background-color: transparent;
+    background-color: black;
 }
-.datetime{
-    font-size: 14px;
-    font-style: italic;
-    font-family: 'Tahoma';
-    line-height: 0.9;
-    word-spacing: 2;
-    color:#00264d;
 
-}
-.body{
-     font-size: 16px;
-    letter-spacing: 1.5;
-    font-family: 'Tahoma';
-    word-spacing: 1;
-    color: black;
-    word-wrap:break-word;
-}
 .bold-blog-content{
     font-size: 15px;
     font-weight: bold;
@@ -335,4 +299,22 @@ hr { border: 1px solid white;clear: both;width:50%; }
     border:2px solid white;
     border-radius:50px;
 
+}
+
+.datetime{
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Tahoma';
+    line-height: 0.9;
+    word-spacing: 2;
+    color:#00264d;
+
+}
+.body{
+    font-size: 16px;
+    letter-spacing: 1.5;
+    font-family: 'Tahoma';
+    word-spacing: 1;
+    color: black;
+    word-wrap:break-word;
 }

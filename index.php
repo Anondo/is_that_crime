@@ -9,6 +9,7 @@
     <script src="js/blog_filter.js"></script>
     <script src="js/animation.js"></script>
     <script src = 'js/map.js'></script>
+    <script src = 'js/tiles_animation.js'></script>
 </head>
 
 
@@ -92,13 +93,13 @@
 
         <div id = "section-2">
             <div class="supporting-div"></div>
-            <div id = "right-content">
+            <div id = "left-content">
                 <input type="text" name="serach" id = "searchbox" placeholder="search by">
                 <select name="by" id = "searchby">
                         <option value = "location"> Location </option>
                         <option value = "category"> Category </option>
                         <option value = "user"> User </option>
-                        <option value = "title"> title </option>
+                        <option value = "title"> Title </option>
                 </select>
             </div>
 
@@ -133,9 +134,9 @@
                             $blogger = $blog->bloggerName($blogger_id);
                             $blogger_pp = $blog->getBloggerProfilePicture($blogger_id);
                         }
-                        echo "<div class = 'single_blog   blogs' id={$row['blog_id']}>";
+                        echo "<div class = 'single_blog   blogs' id={$row['blog_id']} onMouseOver='myFunction(this.id)' onmouseout='hoverOutStyle(this.id)'>";
 
-                        echo "<div class = 'single_blog1' onMouseover = 'blogAnimation()'>";
+                        echo "<div class = 'single_blog1' id='sb1{$row['blog_id']}'>";
                             echo "<div class='div_blog_title'>"."<a class = 'blog_title' href = 'Views/blog.php/?blog_id=".$row['blog_id']."'><span class='title'>".$title."</span></a></div>";
 
                             echo "<div class = 'single_blog_content' class='blog'>";
@@ -148,7 +149,7 @@
                         echo "</div>";
                         echo "</div>";
 
-                        echo "<div class = 'single_blog2'>";
+                        echo "<div class = 'single_blog2' id='sb2{$row['blog_id']}'>";
                             echo "<div class='div_blog_title'>"."<a class = 'blog_title' href = 'Views/blog.php/?blog_id=".$row['blog_id']."'><span class='title'>".$title."</span></a></div>";
 
                             echo "<div class = 'single_blog_content' class='blog'>";
@@ -176,13 +177,5 @@
 </div>
 </article>
 </div>
-
-<script type="text/javascript">
-    var divi = getElementsByClassName("single_blog1");
-    function blogAnimation(){
-        divi.style.display = 'none';
-    }
-
-</script>
 </body>
 </html>
