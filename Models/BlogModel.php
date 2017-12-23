@@ -107,6 +107,10 @@ class BlogModel extends Models{
     }
     function removeBlog($id)
     {
+        $result = $this->executeQuery("select location from blogs where blog_id  = $id and del = false");
+        $location = $result->fetch_assoc()["location"];
+        $locaton = explode(" " , $location)[0];
+        $ok = $this->executeDMLQuery("update location set crimes = crimes - 1 where loc_name = '$location'");
         $ok = $this->executeDMLQuery("update blogs set del = true where blog_id = $id");
         return $ok;
     }
