@@ -83,9 +83,7 @@
                     echo "<p class ='blog_title'>".$blog["title"]."</p>".checkRemovalbeBlog($blog["blog_id"] , $userId);
                     echo "<p class = \"datetime\">".$blog["datetime"]."</p>";
                     echo "<p class = \"body\">".$blog["body"]."</p>";
-                    echo "<p class =\"bold-blog-content\">Location: ".$blog["location"]."</p>";
-                    echo "<p class =\"bold-blog-content\">Category: ".$blog["category"]."</p>";
-
+                    
                 if($blog["attachment"])
                 {
                     $video = false;
@@ -131,12 +129,14 @@
                     else
                     {
                         echo "<p class =\"bold-blog-content\">Attachment:
-                        <img src = '{$blog['attachment']}' />
+                        <img src = '{$blog['attachment']}'  width='200' height='150'/>
                         </p>";
                     }
 
 
                 }
+                    echo "<p class =\"bold-blog-content\">Location: ".$blog["location"]."</p>";
+                    echo "<p class =\"bold-blog-content\">Category: ".$blog["category"]."</p>";
                 echo "<hr>";
                 echo "</div>";
 
