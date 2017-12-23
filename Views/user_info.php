@@ -66,7 +66,7 @@ $role = $user["role"];
                 <label id="img-label">Current Profile Picture</label>
                 <br><img id="profile_pic" name="pro_pic" src="<?php echo $pro_pic ?>" onerror="return setDefaultPP(this)"/>
                 <br><label id ="imginput-button" for="imginput">Upload New Picture</label>
-                    <br><input id= "imginput" type="file" name="pro_pic" onchange="preview(this)"/>
+                    <br><input id= "imginput" type="file" accept="image/*" name="pro_pic" onchange="preview(this)"/>
             </div>
 
             <div id="data-section">
