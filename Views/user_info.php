@@ -131,8 +131,10 @@ $role = $user["role"];
             <br><input type="text" class="input" name="email" placeholder="xyz@dmail.com..." onkeyup="emailValidate(this.value,<?php echo $userid ?>)" value="<?php echo $email;?>"/>
             <span id="email_error" style="color:red;"></span>
 
-            <br><label>Password :</label>
-            <br><input type="text" class="input" name="pass" placeholder="password"  onkeyup="passwordValidate(this.value , signupForm.cpass.value)" value="<?php echo $password;?>"/><span id="password_error" style="color:red;"></span>
+            <br><label>New Password :</label>
+            <br><input type="password" class="input" name="pass" placeholder="password"  onkeyup="passwordValidate(this.value , user_update_form.cpass.value)" /><span id="password_error" style="color:red;"></span>
+            <br><label>Confirm Password :</label>
+            <br><input type="password" class="input" name="cpass" placeholder="re-type password"  onkeyup="passwordValidate(user_update_form.pass.value,this.value)" /><span id="password_error" style="color:red;"></span>
 
             <br>I am <select name="gender">
                                       <option value="male"<?php if($gender=="male"){echo "selected='selected'";} ?>>Male</option>
