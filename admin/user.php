@@ -81,23 +81,27 @@
             <th>Role</th>
             <th>Operation</th>
          </tr>";
-	while($user = $users->fetch_assoc())
-	{
-        echo "<tr id='{$user['user_id']}' class='users'>
-                <td class='fname'>{$user['fname']}</td>
-                <td class='lname'>{$user['lname']}</td>
-                <td class='abelow aabove'>{$user['age']}</td>
-                <td>{$user['bdate']}</td>
-                <td id='td-username' class='username'>{$user['username']}</td>
-                <td id='td-email' class='email'>{$user['email']}</td>
-                <td id='td-password'>{$user['password']}</td>
-                <td id='td-pictures'><img class='circled_pro_pic' style='width:30px;height:30px;' src='{$user['pro_pic']}' onerror='return setDefaultPP(this)'/></td>
-                <td class='gender'>{$user['gender']}</td>
-                <td class='role'>{$admincontrol->getRoleName($user['role'])}</td>
-                <td id='operation'><a href = 'user_edit.php?user_id={$user['user_id']}'><button id='edit-button'>EDIT</button></a><button id='delete-button' onclick='rmvUser({$user['user_id']})'>DELETE</button></td>
-             </tr>";
+    if($users)
+    {
+        while($user = $users->fetch_assoc())
+    	{
+            echo "<tr id='{$user['user_id']}' class='users'>
+                    <td class='fname'>{$user['fname']}</td>
+                    <td class='lname'>{$user['lname']}</td>
+                    <td class='abelow aabove'>{$user['age']}</td>
+                    <td>{$user['bdate']}</td>
+                    <td id='td-username' class='username'>{$user['username']}</td>
+                    <td id='td-email' class='email'>{$user['email']}</td>
+                    <td id='td-password'>{$user['password']}</td>
+                    <td id='td-pictures'><img class='circled_pro_pic' style='width:30px;height:30px;' src='{$user['pro_pic']}' onerror='return setDefaultPP(this)'/></td>
+                    <td class='gender'>{$user['gender']}</td>
+                    <td class='role'>{$admincontrol->getRoleName($user['role'])}</td>
+                    <td id='operation'><a href = 'user_edit.php?user_id={$user['user_id']}'><button id='edit-button'>EDIT</button></a><button id='delete-button' onclick='rmvUser({$user['user_id']})'>DELETE</button></td>
+                 </tr>";
 
-	}
+    	}
+    }
+
 	echo "</table>";
 
 

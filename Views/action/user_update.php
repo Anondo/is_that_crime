@@ -6,7 +6,7 @@ $id = $_GET["user_id"];
 $role = $_GET["role"];
 $pro_pic = $_GET["pp"];
 if(!empty($_POST["fname"]) && !empty($_POST["lname"]) && !empty($_POST["day"]) && !empty($_POST["month"]) && !empty($_POST["year"]) &&
-!empty($_POST["uname"]) && !empty($_POST["email"]) && !empty($_POST["pass"]) && !empty($_POST["gender"]))
+!empty($_POST["uname"]) && !empty($_POST["email"])  && !empty($_POST["gender"]))
 {
     $fname = $_POST["fname"];
     $lname = $_POST["lname"];

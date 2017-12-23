@@ -71,18 +71,22 @@
             <th>Category</th>
             <th>Operation</th>
          </tr>";
-    while($blog = $blogs->fetch_assoc())
+    if($blogs)
     {
-        $blogger = $blogcontrol->bloggerName($blog['blogger_id']);
-        echo "<tr id='{$blog['blog_id']}' class='blogs'>
-                <td>{$blog['datetime']}</td>
-                <td>{$blog['title']}</td>
-                <td id='td-blogger'>$blogger</td>
-                <td>{$blog['location']}</td>
-                <td>{$blog['category']}</td>
-                <td id='operation'><a href = 'blog_edit.php?blog_id={$blog['blog_id']}'><button id='edit-button'>EDIT</button></a></td>
-             </tr>";
+        while($blog = $blogs->fetch_assoc())
+        {
+            $blogger = $blogcontrol->bloggerName($blog['blogger_id']);
+            echo "<tr id='{$blog['blog_id']}' class='blogs'>
+                    <td>{$blog['datetime']}</td>
+                    <td>{$blog['title']}</td>
+                    <td id='td-blogger'>$blogger</td>
+                    <td>{$blog['location']}</td>
+                    <td>{$blog['category']}</td>
+                    <td id='operation'><a href = 'blog_edit.php?blog_id={$blog['blog_id']}'><button id='edit-button'>EDIT</button></a></td>
+                 </tr>";
+        }
     }
+
     echo "</table>";
    ?>
    </div>

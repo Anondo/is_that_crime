@@ -8,7 +8,7 @@ function validate(id)
     var password = form['pass'].value;
     var cpassword = form['cpass'].value;
     var pro_pic = form["pro_pic"].value;
-    if(emptyFieldValidate(first_name , last_name , username , email , password) && usernameValidate(username,id) && emailValidate(email,id) && passwordValidate(password , cpassword) && pictureValidate(pro_pic))
+    if(emptyFieldValidate(first_name , last_name , username , email) && usernameValidate(username,id) && emailValidate(email,id) && passwordValidate(password , cpassword) && pictureValidate(pro_pic))
     {
         //form.action = "http://localhost/Projects/aiub%20project/Views/action/register_user.php/?js_enabled="+true;
         return true;
@@ -40,7 +40,7 @@ function passwordValidate(p , cp)
         }
     }
 
-    
+
     if(p.length < 8)
     {
         //alert("Password length must be of at least 8 characters.");
@@ -102,9 +102,9 @@ function emailValidate(email , id)
     error.innerHTML = "";
     return true;
 }
-function emptyFieldValidate(fname , lname , uname , email , pass , cpass)
+function emptyFieldValidate(fname , lname , uname , email )
 {
-    if(fname == "" || lname == "" || uname == "" || email == "" || pass == "")
+    if(fname == "" || lname == "" || uname == "" || email == "")
     {
         alert("None of the fields can be empty");
         return false;
