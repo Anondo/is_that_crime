@@ -54,7 +54,7 @@ class BlogModel extends Models{
     function getBlog($id)
     {
         $blog = $this->executeQuery("select * from blogs where blog_id = $id and del = false");
-        if($blog->num_rows > 0)
+        if($blog)
         {
             $blog = $blog->fetch_assoc();
             return $blog;
