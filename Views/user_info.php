@@ -41,7 +41,7 @@ $role = $user["role"];
 				if($login->isLogged())
 				{
 					echo "<img id='pro_pic' src='{$_SESSION['pro_pic']}' onerror='return setDefaultPP(this)'/>";
-					echo "<b class = \"navigationb\">".$login->getUsername()." , Information</b>";
+					echo "<b class = \"navigationb\">".$login->getUsername()."</b>";
 				}
 				else
 				{
@@ -135,7 +135,7 @@ $role = $user["role"];
             <br><label>Confirm Password :</label>
             <br><input type="password" class="input" name="cpass" placeholder="re-type password"  onkeyup="passwordValidate(user_update_form.pass.value,this.value)" /><span id="password_error" style="color:red;"></span>
 
-            <br>I am <select name="gender">
+            <br><label>I am </label> <select name="gender">
                                       <option value="male"<?php if($gender=="male"){echo "selected='selected'";} ?>>Male</option>
                                       <option value="female"<?php if($gender=="female"){echo "selected='selected'";} ?>>Female</option>
                                       <option value="other"<?php if($gender=="other"){echo "selected='selected'";} ?>>Other</option>

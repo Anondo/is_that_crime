@@ -9,15 +9,23 @@ article{
     padding-right: 10px;
     height: 100%;
 }
- nav{
+
+
+nav a{
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav{
     margin-top: 4.4%;
     float:left;
     width:5%;
-    background-color:#ff6666;
+    background-color:#b9d5aa;
     position: fixed;
 }
 nav a:hover{
-    background-color:#ff4d4d ;
+    background-color:#ff6666;
 }
 #index-content{
     width:95%;
@@ -162,7 +170,7 @@ tr td:hover {
 
 #section-2{
     width:100%;
-    height:auto;
+    height:100%;
     padding: 0px 5px 0px 5px;
     float:left;
     background-color:#f2ffe6;
@@ -232,7 +240,7 @@ tr td:hover {
     background-color: #001a33
 }*/
 .single_blog:hover{
-    background-color:#ccfff5;
+    background-color:#b9d5aa;
 }
 .single_blog_content{
     border-color: transparent;
@@ -272,12 +280,18 @@ hr { border: 3px double orange;clear: both;width:50%; }
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 .div_blog_title:hover{
-    border-bottom:5px dotted black;
+    border-bottom:5px dotted #ff6666;
 }
 .blog_title:hover{
-    color:orange;
-    background-color: black;
+    background-color: #ff6666;
 }
 
 .bold-blog-content{

@@ -15,7 +15,7 @@ article{
     border-style: none;
     border-left:3px double #ffb3b3;
     border-right:3px double #ffb3b3;
-    padding: 10px 20px 40px 20px;
+    padding: 10px 20px 90px 20px;
     margin: 0 auto;
 }
 #data-section{
@@ -111,10 +111,10 @@ option{
 }
 #imginput-button{
     font-size: 14px;
-    border:1px solid black;
+    border:1px solid #ff751a;
     border-radius:5px;
-    background-color: grey;
-    color:black;
+    background-color: #ff751a;
+    color:beige;
     padding:6px 10px 6px 10px;
     float: left;
     box-sizing: border-box;
@@ -123,6 +123,7 @@ option{
 }
 #imginput-button:hover{
     background-color: black;
+    border-color:#ff751a;
     color:white;
 }
 
@@ -134,17 +135,16 @@ option{
     border-radius: 5px;
     padding: 8px 20px;
     background-color:black;
-    color: lightgrey;
+    color: beige;
     text-align: center;
-    font-family: "";
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
-    margin-top:20px;
+    margin-bottom:50px;
     float: right;
     box-sizing: border-box;
 }
 #update-button:hover{
-    background-color: darkgrey;
-    color: black;
+    background-color: orange;
+    color:beige;
 }

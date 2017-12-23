@@ -6,7 +6,6 @@
     <script src = "http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/js/default_pp_setter.js"></script>
     <script src = "http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/js/profile_picture_previewer.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="../css/index_style.css">
     <link rel="stylesheet" type="text/css" href="../css/navigation.css">
     <link rel="stylesheet" type="text/css" href="../css/signup_style.css">
 </head>
