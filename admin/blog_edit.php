@@ -64,7 +64,57 @@ $name_hidden = $blog["name_hidden"];
                  echo "<p class = \"body\">".$body."</p>";
                  echo "<p class =\"bold-blog-content\">Location: ".$location."</p>";
                  echo "<p class =\"bold-blog-content\">Category: ".$category."</p>";
-                 //echo $blog["attachment"]; //need to fix this
+                 if($blog["attachment"])
+                 {
+                     $video = false;
+                     $audio = false;
+                     $video_format = array("mp4" , "mkv" , "avi");
+                     $audio_format = array("mp3" , "wma" , "wav");
+                     $format = explode("." , $blog["attachment"]);
+                     $format = $format[sizeof($format)-1];
+                     foreach($video_format as $vf)
+                     {
+                         if($format == $vf)
+                         {
+                             $video = true;
+                             break;
+                         }
+                     }
+                     foreach($audio_format as $af)
+                     {
+                         if($format == $af)
+                         {
+                             $audio = true;
+                             break;
+                         }
+                     }
+                     if($video)
+                     {
+                         echo "<p class =\"bold-blog-content\">Attachment:
+                         <video width='320' height='240' controls>
+                         <source src='{$blog['attachment']}' type='video/mp4'>
+                         <source src='{$blog['attachment']}' type='video/ogg'>
+                         </video>
+                         </p>";
+                     }
+                     else if($audio)
+                     {
+                         echo "<p class =\"bold-blog-content\">Attachment:
+                         <audio controls>
+                         <source src='{$blog['attachment']}' type='audio/ogg'>
+                         <source src='{$blog['attachment']}' type='audio/mpeg'>
+                         </audio>
+                         </p>";
+                     }
+                     else
+                     {
+                         echo "<p class =\"bold-blog-content\">Attachment:
+                         <img src = '{$blog['attachment']}' />
+                         </p>";
+                     }
+
+
+                 }
                  echo "<p class =\"bold-blog-content\">By-----".$blogger."</p>";
                  echo "</div>";
                  echo "<hr>";
