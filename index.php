@@ -92,7 +92,7 @@
         </div>
 
         <div id = "section-2">
-            <div class="supporting-div"></div>
+           
             <div id = "left-content">
                 <input type="text" name="serach" id = "searchbox" placeholder="search by">
                 <select name="by" id = "searchby">
