@@ -77,7 +77,7 @@ class BlogModel extends Models{
 
 	function blogByKeyValue($key , $value)
 	{
-        if($key == "username")
+        if($key == "user")
             $result = $this->executeQuery("select * from blogs where blogger_id in(select user_id from users where username LIKE '%$value%')");
         else
 		      $result = $this->executeQuery("Select * from blogs where $key LIKE '%$value%'");

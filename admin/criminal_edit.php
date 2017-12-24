@@ -56,6 +56,9 @@ if(isset($_GET["criminal_id"]))
                     <a href = "criminal.php" > Manage Criminals </a>
                 </div>
             </li>
+            <?php
+			 	echo "<li class = \"right-li\"><a href = 'http://localhost:{$_SERVER["SERVER_PORT"]}/Projects/aiub project/index.php'>Home</a></li>";
+			?>
         </ul>
     </navigation>
     <article>

@@ -38,16 +38,8 @@
                     echo "<li class=\"right-li\"><a href = 'login.php'>Login</a></li>";
                 }
             ?>
-            <li class="dropdown right-li">
-                <a href="#" class="dropbtn">Manage</a>
-                <div class="dropdown-content">
-                    <a href = "blog.php" > Manage Blogs </a>
-                    <a href = "user.php" > Manage Users </a>
-                    <a href = "criminal.php" > Manage Criminals </a>
-                </div>
-            </li>
 
-			<div id = "right-content">
+            <div id = "right-content">
             <input type="text" name="serach" id = "searchbox" placeholder="search by">
             <select name="by" id = "searchby">
                     <option value = "username"> Username </option>
@@ -60,6 +52,19 @@
                     <option value = "email"> Email </option>
             </select>
         </div>
+
+            <li class="dropdown right-li">
+                <a href="#" class="dropbtn">Manage</a>
+                <div class="dropdown-content">
+                    <a href = "blog.php" > Manage Blogs </a>
+                    <a href = "user.php" > Manage Users </a>
+                    <a href = "criminal.php" > Manage Criminals </a>
+                </div>
+            </li>
+
+            <?php
+                echo "<li class = \"right-li\"><a href = 'http://localhost:{$_SERVER["SERVER_PORT"]}/Projects/aiub project/index.php'>Home</a></li>";
+            ?>
         </ul>
     </navigation>
 
