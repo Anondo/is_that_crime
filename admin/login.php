@@ -1,6 +1,6 @@
 <?php
 
-require_once(get_include_path()."\Projects\aiub project\Controllers\AdminController.php");
+require_once(__DIR__."\..\Controllers\AdminController.php");
 $admin_login = new AdminController();
 if($admin_login->isLogged()) //if user already logged in
 		$admin_login->redirect("http://localhost:{$_SERVER["SERVER_PORT"]}/Projects/aiub%20projectadmin/index.php"); //redirect to the home page
@@ -38,7 +38,7 @@ if($admin_login->isLogged()) //if user already logged in
   				</div>
 	 		</li>
 	 	</ul>
-	
+
 <div align="center">
 	<?php
 	if(isset($_GET["logreq"]))

@@ -15,7 +15,7 @@
     <ul>
       <?php
 
-        require_once(get_include_path()."\Projects\aiub project\Controllers\AdminController.php");
+        require_once(__DIR__."\..\Controllers\AdminController.php");
         $admin_login = new AdminController();
         if($admin_login->isLogged())
         {

@@ -1,8 +1,8 @@
 <?php
-require_once(get_include_path()."Projects\aiub project\Controllers\BlogController.php");
-require(get_include_path()."\Projects\aiub project\Controllers\AdminController.php");
-require(get_include_path()."\Projects\aiub project\Controllers\UserController.php");
-require(get_include_path()."\Projects\aiub project\Controllers\CommentController.php");
+require_once(__DIR__."\..\Controllers\BlogController.php");
+require(__DIR__."\..\Controllers\AdminController.php");
+require(__DIR__."\..\Controllers\UserController.php");
+require(__DIR__."\..\Controllers\CommentController.php");
 $admincontrol = new AdminController();
 $user = new UserController();
 $comment = new CommentController();
@@ -35,7 +35,7 @@ $name_hidden = $blog["name_hidden"];
           ?>
      </title>
 
-     
+
     <link rel="stylesheet" type="text/css" href="http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/css/blog_style.css">
     <link rel="stylesheet" type="text/css" href="http://localhost:<?php echo  $_SERVER["SERVER_PORT"];?>/Projects/aiub%20project/css/comment_style.css">
  </head>

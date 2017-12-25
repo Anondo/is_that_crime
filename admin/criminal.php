@@ -12,8 +12,8 @@
     <script src = 'http://localhost:<?php echo $_SERVER['SERVER_PORT']; ?>/Projects/aiub project/js/criminal_filter.js'></script>
 
     <?php
-    require_once(get_include_path()."\Projects\aiub project\Controllers\AdminController.php");
-    require_once(get_include_path()."\Projects\aiub project\Controllers\CriminalController.php");
+    require_once(__DIR__."\..\Controllers\AdminController.php");
+    require_once(__DIR__."\..\Controllers\CriminalController.php");
     $admincontrol = new AdminController();
     $criminalcontrol = new CriminalController();
     if(!$admincontrol->isLogged())
@@ -53,7 +53,7 @@
                 <option value = "email"> Email </option>
             </select>
         </div>
-        
+
             <li class="dropdown right-li">
                 <a href="#" class="dropbtn">Manage</a>
                 <div class="dropdown-content">

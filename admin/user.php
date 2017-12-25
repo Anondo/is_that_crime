@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src = 'http://localhost:<?php echo $_SERVER['SERVER_PORT']; ?>/Projects/aiub project/js/user_filter.js'></script>
     <?php
-    require_once(get_include_path()."\Projects\aiub project\Controllers\AdminController.php");
+    require_once(__DIR__."\..\Controllers\AdminController.php");
     $admincontrol = new AdminController();
     if(!$admincontrol->isLogged())
     {

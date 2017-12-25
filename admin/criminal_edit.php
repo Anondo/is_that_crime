@@ -1,6 +1,6 @@
 <?php
 
-require_once(get_include_path()."Projects\aiub project\Controllers\CriminalController.php");
+require_once(__DIR__."\..\Controllers\CriminalController.php");
 $id = 0;
 if(isset($_GET["criminal_id"]))
     $id = $_GET["criminal_id"];
@@ -35,7 +35,7 @@ if(isset($_GET["criminal_id"]))
         <ul>
             <?php
 
-                require_once(get_include_path()."\Projects\aiub project\Controllers\AdminController.php");
+                require_once(__DIR__."\..\Controllers\AdminController.php");
                 $admin_login = new AdminController();
                 if($admin_login->isLogged())
                 {

@@ -3,7 +3,7 @@
 <html>
 <head>
 	<title>Post</title>
-	
+
 	<link rel="stylesheet" type="text/css" href="../css/navigation.css">
 	<link rel="stylesheet" type="text/css" href="../css/postcrime_style.css">
 
@@ -15,10 +15,10 @@
 <body>
 <div>
 	<div class="navigation">
-		
+
 			<?php
-				require(get_include_path()."\Projects\aiub project\Controllers\login_controller.php");
-				require(get_include_path()."\Projects\aiub project\Controllers\LocationController.php");
+				require(__DIR__."\..\Controllers\login_controller.php");
+				require(__DIR__."\..\Controllers\LocationController.php");
 				$location = new LocationController();
 				$login = new Login();
 				if($login->isLogged())
@@ -36,7 +36,7 @@
 				else
 					echo "<a class = 'right-li' href = 'signup.php'>Signup</a>";
 				echo "<a class = 'right-li' href = 'crime_post.php'>Post Crime</a>";
-				echo "<a class = 'right-li' href = 'http://localhost:".$_SERVER['SERVER_PORT']."/Projects/aiub project/index.php'>Home</a>";	
+				echo "<a class = 'right-li' href = 'http://localhost:".$_SERVER['SERVER_PORT']."/Projects/aiub project/index.php'>Home</a>";
 			?>
     </div>
 
@@ -57,8 +57,8 @@
 					<input type="text" id ="title-post" name="title" placeholder="Title" onkeyup="nothing_wrong()">
 				</div>
 
-				<div id = "mini-div-container">	
-					
+				<div id = "mini-div-container">
+
 					<div id = "mini-div">
 
 						<label><b>Category:</b></label><br>
@@ -72,7 +72,7 @@
 							</select>
 						</div>
 
-						<label><b>Place:</b></label><br>	
+						<label><b>Place:</b></label><br>
 						<div id = "mini-div-box-1">
 							<select id="select-location" name ="location">
 							<?php
@@ -89,10 +89,10 @@
 							<textarea id="detailedlocation" name="secloc" cols = "100" rows="4"
 							style="resize:none;" placeholder=" detailed location ..." > </textarea>
 						</div>
-						
+
 					</div>
 
-					
+
 					<div id="div-description-body">
    						<label><b><sup>* </sup>Description : </b></label><br>
 						<textarea id="description-body" name="body" cols = "120" rows="8" style="resize:none;" placeholder=" write here ...." onkeyup="nothing_wrong()"></textarea>

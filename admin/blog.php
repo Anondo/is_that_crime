@@ -8,8 +8,8 @@
     <script src = 'http://localhost:<?php echo $_SERVER['SERVER_PORT']; ?>/Projects/aiub project/js/blog_filter.js'></script>
 
     <?php
-    require_once(get_include_path()."\Projects\aiub project\Controllers\AdminController.php");
-    require_once(get_include_path()."\Projects\aiub project\Controllers\BlogController.php");
+    require_once(__DIR__."\..\Controllers\AdminController.php");
+    require_once(__DIR__."\..\Controllers\BlogController.php");
 
     $admincontrol = new AdminController();
     $blogcontrol = new BlogController();

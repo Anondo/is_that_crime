@@ -1,6 +1,6 @@
 <?php
-require_once(get_include_path()."\Projects\aiub project\Controllers\UserController.php");
-require_once(get_include_path()."\Projects\aiub project\Controllers\CriminalController.php");
+require_once(__DIR__."\..\Controllers\UserController.php");
+require_once(__DIR__."\..\Controllers\CriminalController.php");
 $usercontrol = new UserController();
 $criminal_control = new CriminalController();
 $id = $_GET["user_id"];
